@@ -13,8 +13,9 @@ class Meditation extends Model
      */
     protected $fillable = [
         'started_at',
-        'ended_at',
+        'completed_at',
         'duration_in_seconds',
+        'streak',
     ];
 
     /**
@@ -23,9 +24,10 @@ class Meditation extends Model
      * @var array
      */
     protected $casts = [
-        'started_at' => 'datetime',
-        'ended_at'   => 'datetime',
-        'duration'   => 'integer',
+        'started_at'          => 'datetime',
+        'completed_at'        => 'datetime',
+        'duration_in_seconds' => 'integer',
+        'streak'              => 'integer',
     ];
 
     /**

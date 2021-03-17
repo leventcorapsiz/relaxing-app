@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 abstract class Repository
 {
     /**
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Builder
      */
     protected $model;
 
