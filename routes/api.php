@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::post('/user/login', 'LoginController');
+
+Route::middleware('auth:sanctum')
+    ->group(function () {
+        // actions
+        Route::post('/meditations', 'MeditationController@store');
+        Route::patch('/{meditation}/complete', 'MeditationController@complete');
+        // statistics
+        Route::get('/meditations/statistics/summary', 'Meditation\StatisticsController@summary');
+        Route::get(
+            '/meditations/statistics/active-days-in-this-month',
+            'Meditation\StatisticsController@activeDaysInThisMonth'
+        );
+        Route::get(
+            '/meditations/statistics/last-7-days',
+            'Meditation\StatisticsController@lastSevenDays'
+        );
+    });
