@@ -36,4 +36,22 @@ class StatisticsController extends Controller
                 now())
             );
     }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function lastSevenDays(Request $request)
+    {
+        return response()
+            ->json($this->statisticsService->lastSevenDays($request->user()));
+    }
+
+    /**
+     * @param \Illuminate\Http\Request $request
+     */
+    public function activeDaysInThisMonth(Request $request)
+    {
+        //
+    }
 }

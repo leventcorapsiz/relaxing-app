@@ -124,4 +124,21 @@ class MeditationRepository extends Repository implements MeditationRepositoryCon
             ->whereNotNull('completed_at')
             ->sum('duration_in_seconds');
     }
+
+    /**
+     * @param \App\Models\User $user
+     * @param \Carbon\Carbon $startDate
+     * @param \Carbon\Carbon $endDate
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function getUserMeditationDurationByDate(User $user, Carbon $startDate, Carbon $endDate)
+    {
+        return $this->model
+            ->selectRaw('sum(duration_in_seconds) as total_duration, DATE_FORMAT(started_at, "%Y-%m-%d") as date')
+            ->where('user_id', $user->id)
+            ->whereBetween('started_at', [$startDate, $endDate])
+            ->whereNotNull('completed_at')
+            ->groupBy('date')
+            ->get();
+    }
 }

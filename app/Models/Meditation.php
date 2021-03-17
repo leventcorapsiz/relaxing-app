@@ -26,6 +26,7 @@ class Meditation extends Model
     protected $casts = [
         'started_at'          => 'datetime',
         'completed_at'        => 'datetime',
+        'date'                => 'datetime',
         'duration_in_seconds' => 'integer',
         'streak'              => 'integer',
     ];

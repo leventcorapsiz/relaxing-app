@@ -16,8 +16,9 @@ class Complete extends FormRequest
      */
     public function authorize()
     {
-        return $this->user()->id ==
-            resolve(MeditationRepositoryContract::class)->find($this->route('meditation'))->user_id;
+        $meditation = resolve(MeditationRepositoryContract::class)->find($this->route('meditation'));
+
+        return $meditation && $this->user()->id == $meditation->user_id;
     }
 
     /**

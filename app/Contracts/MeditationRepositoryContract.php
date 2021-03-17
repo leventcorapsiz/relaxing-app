@@ -62,4 +62,12 @@ interface MeditationRepositoryContract
      * @return int|null
      */
     public function getUserTotalMeditationDuration(User $user, Carbon $startDate, Carbon $endDate);
+
+    /**
+     * @param \App\Models\User $user
+     * @param \Carbon\Carbon $startDate
+     * @param \Carbon\Carbon $endDate
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function getUserMeditationDurationByDate(User $user, Carbon $startDate, Carbon $endDate);
 }
