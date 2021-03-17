@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')
     ->group(function () {
         // actions
         Route::post('/meditations', 'MeditationController@store');
-        Route::patch('/{meditation}/complete', 'MeditationController@complete');
+        Route::patch('/meditations/{meditation}/complete', 'MeditationController@complete');
         // statistics
         Route::get('/meditations/statistics/summary', 'Meditation\StatisticsController@summary');
         Route::get(
