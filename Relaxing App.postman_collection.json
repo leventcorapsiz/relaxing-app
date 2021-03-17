@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "6920b149-00e8-4e0b-991b-78c26416e460",
+		"name": "Relaxing App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Meditation",
+			"item": [
+				{
+					"name": "Statistics",
+					"item": [
+						{
+							"name": "Summary",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|xnVKwUFsjDdqiHVwSUkfxD7j8AKluiy936CB99IV",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "relaxing-app.test/meditations/statistics/summary",
+									"host": [
+										"relaxing-app",
+										"test"
+									],
+									"path": [
+										"meditations",
+										"statistics",
+										"summary"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Summary",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "relaxing-app.test/meditations/statistics/summary",
+											"host": [
+												"relaxing-app",
+												"test"
+											],
+											"path": [
+												"meditations",
+												"statistics",
+												"summary"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "relaxing-app.test"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Mar 2021 08:02:07 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Mar 2021 08:02:07 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"totalCompletedMeditation\": 4,\n    \"maxStreakInRow\": 2,\n    \"totalMeditationDurationInSeconds\": \"755\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Last 7 Days",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "1|xnVKwUFsjDdqiHVwSUkfxD7j8AKluiy936CB99IV",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "relaxing-app.test/meditations/statistics/last-7-days",
+									"host": [
+										"relaxing-app",
+										"test"
+									],
+									"path": [
+										"meditations",
+										"statistics",
+										"last-7-days"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Last 7 Days",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "relaxing-app.test/meditations/statistics/last-7-days",
+											"host": [
+												"relaxing-app",
+												"test"
+											],
+											"path": [
+												"meditations",
+												"statistics",
+												"last-7-days"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Host",
+											"value": "relaxing-app.test"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Mar 2021 08:34:37 GMT"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 17 Mar 2021 08:34:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.3"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "51"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"totalDurationInSeconds\": 0,\n        \"date\": \"2021-03-10T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": 0,\n        \"date\": \"2021-03-11T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": 0,\n        \"date\": \"2021-03-12T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": 0,\n        \"date\": \"2021-03-13T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": \"36\",\n        \"date\": \"2021-03-14T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": 0,\n        \"date\": \"2021-03-15T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": 0,\n        \"date\": \"2021-03-16T00:00:00.000000Z\"\n    },\n    {\n        \"totalDurationInSeconds\": \"4373\",\n        \"date\": \"2021-03-17T00:00:00.000000Z\"\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|SgxwVYKug1NdKBWvHID8Rs1oGoqeZzfTod56i3iI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "relaxing-app.test/meditations",
+							"host": [
+								"relaxing-app",
+								"test"
+							],
+							"path": [
+								"meditations"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "relaxing-app.test/meditations",
+									"host": [
+										"relaxing-app",
+										"test"
+									],
+									"path": [
+										"meditations"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "relaxing-app.test"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Mar 2021 05:51:47 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Mar 2021 05:51:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": {\n        \"message\": \"Active meditation exists.\",\n        \"exception\": \"UserHasActiveMeditation\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Complete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "9|SgxwVYKug1NdKBWvHID8Rs1oGoqeZzfTod56i3iI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "relaxing-app.test/meditations/1/complete",
+							"host": [
+								"relaxing-app",
+								"test"
+							],
+							"path": [
+								"meditations",
+								"1",
+								"complete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"root@root.com\",\n    \"password\": \"root\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "relaxing-app.test/user/login",
+							"host": [
+								"relaxing-app",
+								"test"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Generate",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"root@root.com\",\n    \"password\": \"root\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "relaxing-app.test/user/login",
+									"host": [
+										"relaxing-app",
+										"test"
+									],
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "relaxing-app.test"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Mar 2021 05:30:05 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Mar 2021 05:30:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.0.3"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"8|T6KJ2aLYHWh82VzIw4F5Zy6o6VTkPG4Pyz5SQu71\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
