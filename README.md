@@ -19,3 +19,9 @@ Set env
 Boot containers
 
       ./vendor/bin/sail up -d   
+      
+Create database & execute migrations
+
+      ./vendor/bin/sail artisan migrate
+      ./vendor/bin/sail artisan db:seed
+              
