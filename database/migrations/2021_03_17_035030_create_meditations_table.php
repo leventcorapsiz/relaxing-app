@@ -17,7 +17,8 @@ class CreateMeditationsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->timestamp('started_at');
-            $table->timestamp('ended_at')->nullable();
+            $table->timestamp('completed_at')->nullable();
+            $table->unsignedBigInteger('streak')->default(1);
             $table->unsignedBigInteger('duration_in_seconds')->nullable();
             $table->softDeletes();
             $table->timestamps();
