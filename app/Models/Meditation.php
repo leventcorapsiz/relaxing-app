@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Meditation extends Model
 {
     /**
-     * The model's attributes.
+     * The attributes that are mass assignable.
      *
-     * @var array
+     * @var string[]
      */
-    protected $attributes = [
+    protected $fillable = [
         'started_at',
         'ended_at',
-        'duration',
+        'duration_in_seconds',
     ];
 
     /**
